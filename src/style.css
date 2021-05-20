@@ -137,6 +137,10 @@ hr:after {
   font-weight: bold;
 }
 
+#weather-description:first-letter {
+  text-transform: uppercase;
+}
+
 .date {
   padding-bottom: 10px;
   opacity: 0.8;
