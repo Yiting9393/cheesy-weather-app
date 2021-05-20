@@ -39,6 +39,42 @@
       </form>
 
       <!-- *** Search form *** -->
+
+      <!-- Current weather content: first row -->
+      <div class="row">
+        <div class="col-7">
+          <h1 id="current-city">Liverpool</h1>
+        </div>
+        <div class="col-5">
+          <button id="Celsius-link">°C</button>
+          <button id="Fahrenheit-link">°F</button>
+        </div>
+      </div>
+      <!-- *** Current weather content: first row *** -->
+
+      <!-- Current weather content: second row -->
+      <div class="row current-weather-conditions">
+        <div class="col-3">
+          <img
+            src="https://openweathermap.org/img/wn/10d@2x.png"
+            alt="weather-icon"
+            width="200"
+            id="weather-icon"
+          />
+        </div>
+        <div class="col-3" id="current-temperature">15°</div>
+        <div class="col-6">
+          <ul class="current-conditions">
+            <li id="weather-description">Light rain</li>
+            <li id="precipitation">80%</li>
+            <li id="humidity">86%</li>
+            <li id="wind">17 mph</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr />
+      <!-- *** Current weather content: second row *** -->
     </div>
     <script src="src/index.js"></script>
   </body>
