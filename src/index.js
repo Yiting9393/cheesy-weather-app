@@ -13,6 +13,8 @@ function displayTemperature(response){
     humidityElement.innerHTML = `${response.data.main.humidity}%`;
     let windElement = document.querySelector("#wind");
     windElement.innerHTML = `${response.data.wind.speed} mph`;
+    let iconElement = document.querySelector("#weather-icon");
+    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function search(city){
