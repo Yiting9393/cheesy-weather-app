@@ -142,6 +142,10 @@ hr:after {
   opacity: 0.8;
 }
 
+.forecast {
+  text-align: center;
+}
+
 .footer {
   font-family: monospace;
   text-align: center;
