@@ -57,8 +57,11 @@ function getForecast(coordinates){
 
 
 function displayTemperature(response){
+    console.log(response.data);
     let cityElement = document.querySelector("#current-city");
     cityElement.innerHTML = response.data.name;
+    let countryElement = document.querySelector("#country");
+    countryElement.innerHTML = response.data.sys.country;
     let temperatureElement = document.querySelector("#current-temperature");
     temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}°`;
     let weatherDescriptionElement = document.querySelector("#weather-description");

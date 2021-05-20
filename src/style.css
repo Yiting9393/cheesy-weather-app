@@ -82,12 +82,15 @@ hr:after {
 }
 
 #current-city {
-  font-size: 70px;
+  font-size: 75px;
   font-weight: 500;
   opacity: 0.9;
-  /* position: relative;
-  right: -43px;
-  text-align: center; */
+}
+
+#country {
+  font-weight: 500;
+  position: relative;
+  top: -45px;
 }
 
 .units {
