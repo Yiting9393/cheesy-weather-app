@@ -23,9 +23,7 @@ function formatForecastDay (timestamp) {
 }
 
 function displayForecast(response){
-let forecast = response.data.daily;
-
-console.log(response.data);
+let forecast = response.data.daily; 
 
     let forecastElement = document.querySelector(".forecast");
     let forecastHTML = `<div class="row">`;
@@ -40,10 +38,12 @@ console.log(response.data);
                   alt="forecast-icon"
                   width="80"
                 />
-                <div id="forecast-temperature"><strong>${Math.round(forecastDay.temp.max)}° </strong>${Math.round(forecastDay.temp.min)}°</div>
+                <div> <span id"forecast-temperature-max"><strong>${Math.round(forecastDay.temp.max)}°</strong></span> <span id="forecast-temperature-min">${Math.round(forecastDay.temp.min)}°</span></div>
               </div>`;
               }
-            });
+            })
+
+            ;
 
         forecastHTML = forecastHTML + `</div>`;
         forecastElement.innerHTML =  forecastHTML;
@@ -57,7 +57,6 @@ function getForecast(coordinates){
 
 
 function displayTemperature(response){
-    console.log(response.data);
     let cityElement = document.querySelector("#current-city");
     cityElement.innerHTML = response.data.name;
     let temperatureElement = document.querySelector("#current-temperature");
