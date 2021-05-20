@@ -45,6 +45,8 @@ let temperatureElement = document.querySelector("#current-temperature");
 temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°`;
 let feelsLikeElement = document.querySelector("#feels-like");
 feelsLikeElement.innerHTML = `${Math.round(feelsLikeCelsiusTemperature)}°`;
+celsiusLink.classList.add("active");
+fahrenheitLink.classList.remove("active");
 }
 
 function convertToFahrenheit (event){
@@ -55,6 +57,8 @@ temperatureElement.innerHTML = `${Math.round(fahrenheitTemperature)}°`;
 let feelsLikeElement = document.querySelector("#feels-like");
 feelsLikeTemperature = (feelsLikeCelsiusTemperature * 9) / 5 + 32;
 feelsLikeElement.innerHTML = `${Math.round(feelsLikeTemperature)}°`
+celsiusLink.classList.remove("active");
+fahrenheitLink.classList.add("active");
 }
 
 let celsiusLink = document.querySelector("#Celsius-button");
