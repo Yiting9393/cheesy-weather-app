@@ -74,11 +74,11 @@ hr:after {
 }
 
 #search-button:hover {
-  background: rgb(247, 67, 36);
+  background: #f14c1e;
 }
 
 #my-location-button:hover {
-  background: rgb(235, 125, 106);
+  background: #ec6e4c;
 }
 
 #current-city {
