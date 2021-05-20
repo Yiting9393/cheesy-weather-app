@@ -1,3 +1,37 @@
+
+function displayTemperature(response){
+    console.log(response.data);
+    let cityElement = document.querySelector("#current-city");
+    cityElement.innerHTML = response.data.name;
+    let temperatureElement = document.querySelector("#current-temperature");
+    temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}°`;
+    let weatherDescriptionElement = document.querySelector("#weather-description");
+    weatherDescriptionElement.innerHTML = response.data.weather[0].description;
+    let feelsLikeElement = document.querySelector("#feels-like");
+    feelsLikeElement.innerHTML = `${Math.round(response.data.main.feels_like)}°`;
+    let humidityElement = document.querySelector("#humidity");
+    humidityElement.innerHTML = `${response.data.main.humidity}%`;
+    let windElement = document.querySelector("#wind");
+    windElement.innerHTML = `${response.data.wind.speed} mph`;
+}
+
+function search(city){
+let apiKey = `bf2c0ac77d7ed4ba5477597b0389d74a`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event){
+    event.preventDefault();
+    let cityElement = document.querySelector("#search-input");
+    search(cityElement.value);
+}
+
+search("London");
+
+let form = document.querySelector(".search-form");
+form.addEventListener("submit", handleSubmit);
+
 function displayForecast(){
 
     let forecastElement = document.querySelector(".forecast");
