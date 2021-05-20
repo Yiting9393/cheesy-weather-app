@@ -15,80 +15,101 @@
   </head>
   <body>
     <div class="container">
-      <!-- Search form -->
+      <div class="content-wrapper">
+        <!-- Search form -->
 
-      <form>
+        <form>
+          <div class="row">
+            <div class="col-7">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter a city..."
+                id="search-input"
+              />
+            </div>
+            <div class="col-5">
+              <input
+                type="submit"
+                class="btn btn-primary"
+                id="search-button"
+                value="Search"
+              />
+            </div>
+          </div>
+        </form>
+
+        <!-- *** Search form *** -->
+
+        <!-- Current weather content: first row -->
         <div class="row">
           <div class="col-7">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Enter a city..."
-              id="search-input"
-            />
+            <h1 id="current-city">Liverpool</h1>
           </div>
           <div class="col-5">
-            <input
-              type="submit"
-              class="btn btn-primary"
-              id="search-button"
-              value="Search"
-            />
+            <button id="Celsius-link">°C</button>
+            <button id="Fahrenheit-link">°F</button>
           </div>
         </div>
-      </form>
+        <!-- *** Current weather content: first row *** -->
 
-      <!-- *** Search form *** -->
-
-      <!-- Current weather content: first row -->
-      <div class="row">
-        <div class="col-7">
-          <h1 id="current-city">Liverpool</h1>
+        <!-- Current weather content: second row -->
+        <div class="row current-weather-conditions">
+          <div class="col-3">
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather-icon"
+              width="200"
+              id="weather-icon"
+            />
+          </div>
+          <div class="col-3" id="current-temperature">15°</div>
+          <div class="col-6">
+            <ul class="current-conditions">
+              <li id="weather-description">Light rain</li>
+              <li id="precipitation">80%</li>
+              <li id="humidity">86%</li>
+              <li id="wind">17 mph</li>
+            </ul>
+          </div>
         </div>
-        <div class="col-5">
-          <button id="Celsius-link">°C</button>
-          <button id="Fahrenheit-link">°F</button>
-        </div>
-      </div>
-      <!-- *** Current weather content: first row *** -->
+        <!-- *** Current weather content: second row *** -->
 
-      <!-- Current weather content: second row -->
-      <div class="row current-weather-conditions">
-        <div class="col-3">
-          <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            alt="weather-icon"
-            width="200"
-            id="weather-icon"
-          />
-        </div>
-        <div class="col-3" id="current-temperature">15°</div>
-        <div class="col-6">
-          <ul class="current-conditions">
-            <li id="weather-description">Light rain</li>
-            <li id="precipitation">80%</li>
-            <li id="humidity">86%</li>
-            <li id="wind">17 mph</li>
-          </ul>
-        </div>
-      </div>
+        <!-- Current weather content: third row -->
+        <p>
+          Last updated: <span id="day">Saturday </span><span id="hour">15:</span
+          ><span id="minutes">08</span>
+        </p>
 
-      <hr />
-      <!-- *** Current weather content: second row *** -->
+        <hr />
+        <!-- *** Current weather content: third row *** -->
 
-      <!-- Weather forecasts -->
-      <div class="row">
-        <div class="col-2">
-          <div id="forcast-day">Tue</div>
-          <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            alt="forecast-icon"
-            width="80"
-          />
-          <div id="forecast-temperature"><strong>18°</strong>14°</div>
+        <!-- Weather forecasts -->
+        <div class="row">
+          <div class="col-2">
+            <div id="forcast-day">Tue</div>
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              alt="forecast-icon"
+              width="80"
+            />
+            <div id="forecast-temperature"><strong>18°</strong>14°</div>
+          </div>
         </div>
       </div>
       <!-- ***Weather forecasts ***-->
+
+      <p class="footer">
+        <a
+          href="https://github.com/Yiting9393/cheesy-weather-app"
+          target="_blank"
+          >Open-source code</a
+        >
+        by Yiting Cheah, hosted on
+        <a href="https://happy-roentgen-70b707.netlify.app" target="_blank"
+          >Netlify</a
+        >
+      </p>
     </div>
     <script src="src/index.js"></script>
   </body>
