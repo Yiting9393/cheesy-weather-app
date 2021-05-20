@@ -18,22 +18,30 @@
       <div class="content-wrapper">
         <!-- Search form -->
 
-        <form>
+        <form class="search-form">
           <div class="row">
-            <div class="col-7">
+            <div class="col-8">
               <input
                 type="text"
-                class="form-control"
+                class="form-control form-control-lg"
                 placeholder="Enter a city..."
                 id="search-input"
               />
             </div>
-            <div class="col-5">
+            <div class="col-1">
               <input
                 type="submit"
-                class="btn btn-primary"
+                class="btn btn-primary form-control-lg"
                 id="search-button"
                 value="Search"
+              />
+            </div>
+            <div class="col-1">
+              <input
+                type="submit"
+                class="btn btn-primary form-control-lg"
+                id="my-location-button"
+                value="My location"
               />
             </div>
           </div>
@@ -43,12 +51,12 @@
 
         <!-- Current weather content: first row -->
         <div class="row">
-          <div class="col-7">
+          <div class="col-8">
             <h1 id="current-city">Liverpool</h1>
           </div>
-          <div class="col-5">
-            <button id="Celsius-link">°C</button>
-            <button id="Fahrenheit-link">°F</button>
+          <div class="col-4 units">
+            <button id="Celsius-button">°C</button>
+            <button id="Fahrenheit-button">°F</button>
           </div>
         </div>
         <!-- *** Current weather content: first row *** -->
@@ -59,24 +67,24 @@
             <img
               src="https://openweathermap.org/img/wn/10d@2x.png"
               alt="weather-icon"
-              width="200"
+              width="150"
               id="weather-icon"
             />
           </div>
-          <div class="col-3" id="current-temperature">15°</div>
-          <div class="col-6">
+          <div class="col-5" id="current-temperature">15°</div>
+          <div class="col-4">
             <ul class="current-conditions">
               <li id="weather-description">Light rain</li>
-              <li id="precipitation">80%</li>
-              <li id="humidity">86%</li>
-              <li id="wind">17 mph</li>
+              <li>Precipitation: <span id="precipitation">80%</span></li>
+              <li>Humidity: <span id="humidity">86%</span></li>
+              <li>Wind: <span id="wind">17 mph</span></li>
             </ul>
           </div>
         </div>
         <!-- *** Current weather content: second row *** -->
 
         <!-- Current weather content: third row -->
-        <p>
+        <p class="date">
           Last updated: <span id="day">Saturday </span><span id="hour">15:</span
           ><span id="minutes">08</span>
         </p>
@@ -99,17 +107,23 @@
       </div>
       <!-- ***Weather forecasts ***-->
 
+      <!-- Footer -->
       <p class="footer">
         <a
           href="https://github.com/Yiting9393/cheesy-weather-app"
           target="_blank"
+          id="github-link"
           >Open-source code</a
         >
         by Yiting Cheah, hosted on
-        <a href="https://happy-roentgen-70b707.netlify.app" target="_blank"
+        <a
+          href="https://happy-roentgen-70b707.netlify.app"
+          target="_blank"
+          id="netlify-link"
           >Netlify</a
         >
       </p>
+      <!-- *** Footer *** -->
     </div>
     <script src="src/index.js"></script>
   </body>
