@@ -1,0 +1,125 @@
+hr {
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+hr:after {
+  background: #fff;
+  content: "§";
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
+
+.container {
+  max-width: 700;
+}
+
+.content-wrapper {
+  border: 1px solid grey;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-left: 300px;
+  margin-right: 300px;
+  padding: 30px;
+}
+
+.search-form {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+#search-button,
+#my-location-button {
+  font-size: 17px;
+  font-weight: 500;
+  height: 45px;
+}
+
+#my-location-button {
+  margin-left: 30px;
+}
+
+#current-city {
+  font-size: 70px;
+  font-weight: 500;
+  opacity: 0.8;
+  /* position: relative;
+  right: -43px;
+  text-align: center; */
+}
+
+.units {
+  padding: 15px 8px;
+}
+
+#Celsius-button,
+#Fahrenheit-button {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px 38px;
+  position: relative;
+  top: 10px;
+}
+
+#Celsius-button {
+  position: relative;
+  right: -6px;
+}
+
+#weather-icon {
+  position: relative;
+  top: -8px;
+  left: -25px;
+}
+
+#current-temperature {
+  font-size: 100px;
+  font-weight: 500;
+  line-height: 120px;
+  padding: 0%;
+  position: relative;
+  left: -15px;
+}
+
+.current-conditions {
+  list-style: none;
+  margin-top: 21px;
+  opacity: 0.6;
+  padding-left: 0;
+}
+
+#weather-description {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.date {
+  padding-bottom: 10px;
+  opacity: 0.8;
+}
+
+.footer {
+  font-family: monospace;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#github-link,
+#netlify-link {
+  text-decoration: none;
+}
+
+#github-link:hover {
+  color: rgb(77, 207, 77);
+}
+
+#netlify-link:hover {
+  color: rgb(77, 207, 77);
+}
