@@ -15,20 +15,40 @@ hr:after {
   top: -13px;
 }
 
-.container {
-  max-width: 700;
+#background-video {
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  opacity: 0.5;
+  /* z-index: 0; */
 }
 
-.content-wrapper {
+.container {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  max-width: 700px;
+  padding: 30px 30px 15px 30px;
+  padding-top: 40px;
+  position: relative;
+  top: 50px;
+}
+
+/* .content-wrapper {
+  background: rgba(0, 0, 0, 0.2);
   border: 1px solid grey;
   border-radius: 10px;
   display: block;
   margin: 0 auto;
   margin-top: 50px;
-  margin-left: 300px;
-  margin-right: 300px;
-  padding: 30px;
-}
+  margin-left: 200px;
+  margin-right: 200px;
+  max-width: 600;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: fixed; */
+/* z-index: 1;
+} */
 
 .search-form {
   padding-top: 20px;
@@ -39,17 +59,32 @@ hr:after {
 #my-location-button {
   font-size: 17px;
   font-weight: 500;
-  height: 45px;
+  height: 48px;
+}
+
+#search-button {
+  background: #094988f5;
+  border: #094988f5;
 }
 
 #my-location-button {
+  background: #1772ccf5;
+  border: #1772ccf5;
   margin-left: 30px;
+}
+
+#search-button:hover {
+  background: rgb(247, 67, 36);
+}
+
+#my-location-button:hover {
+  background: rgb(235, 125, 106);
 }
 
 #current-city {
   font-size: 70px;
   font-weight: 500;
-  opacity: 0.8;
+  opacity: 0.9;
   /* position: relative;
   right: -43px;
   text-align: center; */
@@ -61,6 +96,8 @@ hr:after {
 
 #Celsius-button,
 #Fahrenheit-button {
+  background: #ec6e4c;
+  border: 2px solid rgb(73, 72, 72);
   font-size: 20px;
   font-weight: 500;
   padding: 5px 38px;
@@ -70,7 +107,7 @@ hr:after {
 
 #Celsius-button {
   position: relative;
-  right: -6px;
+  right: -7px;
 }
 
 #weather-icon {
@@ -91,7 +128,7 @@ hr:after {
 .current-conditions {
   list-style: none;
   margin-top: 21px;
-  opacity: 0.6;
+  opacity: 0.8;
   padding-left: 0;
 }
 
